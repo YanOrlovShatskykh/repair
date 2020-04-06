@@ -1,5 +1,6 @@
 body {
   font-family: sans-serif;
+  color: #333333;
 }
 
 img {
@@ -20,7 +21,7 @@ img {
 @media (max-width: 768px) {
   .container {
     max-width: 580px;
-    width: 95%;
+    width: 92%;
   }
 }
 
@@ -65,17 +66,22 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  font-size: 13px;
+  font-weight: 300;
 }
 
 .navbar__button {
   margin-left: 30px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #333333;
 }
 
 .navbar__phone {
   display: inline-block;
   margin-top: 10px;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 700;
   color: #333333;
   text-decoration: none;
 }
@@ -85,7 +91,7 @@ img {
     display: none;
   }
   .navbar__button {
-    font-size: 12px;
+    font-size: 10px;
     padding: 15px 26px;
   }
   .navbar__logo {
