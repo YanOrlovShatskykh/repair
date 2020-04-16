@@ -172,6 +172,11 @@ img {
   font-weight: 300;
 }
 
+.hero-img {
+  -webkit-box-shadow: 27px 27px 35px rgba(0, 0, 0, 0.05), 10px 7px 10px rgba(0, 0, 0, 0.05);
+          box-shadow: 27px 27px 35px rgba(0, 0, 0, 0.05), 10px 7px 10px rgba(0, 0, 0, 0.05);
+}
+
 @media (max-width: 1200px) {
   .hero-block {
     -webkit-box-orient: vertical;
@@ -186,8 +191,8 @@ img {
     padding-right: 0;
   }
   .hero-img {
-    -o-object-fit: contain;
-       object-fit: contain;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
