@@ -1,5 +1,22 @@
+@font-face {
+  font-family: 'Museo Sans Bold';
+  src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.eot");
+  src: local("MuseoSansCyrl-700"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.woff2") format("woff2"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.woff") format("woff"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Museo Sans Light';
+  src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.eot");
+  src: local("MuseoSansCyrl-300"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.woff2") format("woff2"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.woff") format("woff"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
 body {
-  font-family: sans-serif;
+  font-family: 'Museo Sans Light', 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 300;
   color: #333333;
 }
 
@@ -72,16 +89,18 @@ img {
 
 .navbar__button {
   margin-left: 30px;
-  font-size: 13px;
+  font-family: 'Museo Sans Bold', 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
   font-weight: 700;
+  font-size: 13px;
   color: #333333;
 }
 
 .navbar__phone {
   display: inline-block;
   margin-top: 10px;
-  font-size: 20px;
+  font-family: 'Museo Sans Bold', 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
   font-weight: 700;
+  font-size: 20px;
   color: #333333;
   text-decoration: none;
 }
@@ -126,8 +145,9 @@ img {
 .hero-text__title {
   margin: 0;
   margin-bottom: 40px;
-  font-size: 41px;
+  font-family: 'Museo Sans Bold', 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
   font-weight: 700;
+  font-size: 41px;
   line-height: 55px;
 }
 
@@ -135,6 +155,7 @@ img {
   display: inline-block;
   margin-bottom: 71px;
   font-size: 20px;
+  font-family: 'Museo Sans Bold', 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
   font-weight: 700;
 }
 
