@@ -1,0 +1,85 @@
+.offer
+  position: relative
+  background-image: url('../img/offer/offer-bg.jpg')
+  background-repeat: no-repeat
+  background-position: top right
+  background-size: contain
+  &::before
+   content: ''
+   position: absolute
+   top: 0
+   left: 0
+   width: 50%
+   height: 100% 
+   background-color: #ffffff
+  &-block
+    position: relative
+    width: 50%
+    padding-right: 90px
+  &__title
+    max-width: 360px
+    margin-bottom: 20px
+    line-height: 35px
+  &__subtitle
+    display: block
+    max-width: 250px
+    margin-bottom: 31px
+  &__input
+    width: 240px
+    margin-bottom: 30px
+    outline: none
+    &:first-child
+      margin-right: 10px
+    &::placeholder
+      color: $input-color
+    &:focus
+      border-color: $main-color
+  &__button
+    width: 100%
+    margin-bottom: 25px
+    min-height: 70px
+  &__recall
+    display: flex
+    justify-content: space-between
+    font-size: 15px
+    line-height: 24px
+  &__manager
+    margin: 0
+    width: 47%
+  &__number
+    margin: 0
+    width: 40%
+    &-number
+      +bold
+
+@media(max-width: 1200px)
+  .offer
+    background-size: cover
+    &__input
+      width: 96%
+      margin-bottom: 8px
+    &__button
+      font-size: 13px
+@media(max-width: 768px)
+  .offer
+    background: #ffffff
+    &-block
+      width: 100%
+      padding-right: 0
+    &__title
+      margin-bottom: 18px
+      font-size: 18px
+      line-height: 21px
+    &__subtitle
+      font-size: 14px
+    &__button
+      width: 96%
+      font-size: 14px
+      line-height: 18px
+      +bold
+    &__recall
+      flex-direction: column
+    &__manager
+      width: 100%
+    &__number
+      width: 100%
