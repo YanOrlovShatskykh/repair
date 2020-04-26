@@ -1,0 +1,55 @@
+.portfolio
+  background-color: #f5f5f5
+  background-image: url('../img/portfolio/bg-patternBackground.png')
+  background-repeat: repeat-y
+  background-size: 50%
+  &__title
+    max-width: 500px
+    margin: auto
+    margin-bottom: 100px
+  &__slider
+    margin-bottom: 68px
+.arrows
+  display: flex
+  justify-content: space-between
+  max-width: 120px
+  margin: auto
+  margin-top: 68px
+  &__left
+    margin: 0
+    padding: 0
+    width: 45px;
+    height: 19px;
+
+    background-image: url('../img/portfolio/left-arrow.png')
+    background-repeat: no-repeat
+    background-position: center center
+    background-color: transparent
+    border: none
+    outline: none
+    cursor: pointer
+  &__right
+    margin: 0
+    padding: 0
+    width: 45px;
+    height: 19px;
+
+    background-image: url('../img/portfolio/left-arrow.png')
+    background-repeat: no-repeat
+    background-position: center center
+    background-color: transparent
+    border: none
+    outline: none
+    cursor: pointer
+    transform: rotate(180deg)
+    &:hover
+      cursor: pointer
+  & span
+    display: none
+.slider
+  &__image
+    margin: auto
+
+@media(max-width: 768px)
+    .portfolio
+      background-image: none

@@ -36,4 +36,70 @@ $(document).ready(function() {
   });
 
   button.on('click', openModal);
+
+  // $(document).ready(function() {
+  //   $('.slider').slick({
+  //     infinite: true,
+  //     slidesToShow: 3,
+  //     slidesToScroll: 1,
+  //     prevArrow: $('.arrows__left'),
+  //     nextArrow: $('.arrows__right'),
+  //     responsive: [
+  //       {
+  //         breakpoint: 1200,
+  //         settings: {
+  //           slidesToShow: 2,
+  //           slidesToScroll: 1,
+  //           infinite: true
+  //         }
+  //       },
+  //       {
+  //         breakpoint: 768,
+  //         settings: {
+  //           slidesToShow: 1,
+  //           slidesToScroll: 1
+  //         }
+  //       }
+  //     ]
+  //   });
+  // });
+
+  // $('.owl-carousel').owlCarousel({
+  //   loop:true,
+  //   margin:10,
+  //   nav:true,
+  //   responsive:{
+  //       0:{
+  //           items:1
+  //       },
+  //       600:{
+  //           items:3
+  //       },
+  //       1000:{
+  //           items:5
+  //       }
+  //   }
+  // });
+
+  $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    navContainerClass:'arrows',
+    navClass:['arrows__left', 'arrows__right'],
+    responsive:{
+        0:{
+            items:1
+        },
+        700:{
+            items:2
+        },
+        900:{
+            items:2
+        },
+        1200:{
+            items:3
+        }
+    }
+  });
 });

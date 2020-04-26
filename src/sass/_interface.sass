@@ -18,6 +18,7 @@ img
     margin: 0
     font-size: 24px
     +bold
+    text-align: center
 .input
   border: 1px solid $border-input
   padding: 23px 26px
@@ -56,6 +57,7 @@ img
     transition: background-color 0.2s, opacity 0.2s, visibility 0.2s;
     opacity: 0;
     visibility: hidden
+    z-index: 100
     &:hover
       background-color: lighten($main-color, 10%)
     &_show
