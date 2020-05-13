@@ -1,3 +1,4 @@
+new WOW().init();
 $(document).ready(function() {
   const button = $('#button');
   const modal = $('#modal');
@@ -87,6 +88,9 @@ $(document).ready(function() {
     nav:true,
     navContainerClass:'arrows',
     navClass:['arrows__left', 'arrows__right'],
+    autoplay:true,
+    autoplayTimeout:2000,
+    autoplayHoverPause:true,
     responsive:{
         0:{
             items:1
@@ -102,4 +106,6 @@ $(document).ready(function() {
         }
     }
   });
+
+  
 });
