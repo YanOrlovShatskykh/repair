@@ -496,13 +496,19 @@ img {
   background-size: 50%;
 }
 
-.portfolio__title {
-  margin: auto;
-  margin-bottom: 100px;
+.portfolio__section {
+  padding-top: 90px;
+  padding-bottom: 83px;
 }
 
-.portfolio__slider {
-  margin-bottom: 68px;
+.portfolio__title {
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 92px;
+  font-size: 30px;
+  line-height: 45px;
+  font-family: 'Museo Sans Bold', 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 700;
 }
 
 .arrows {
@@ -566,13 +572,19 @@ img {
 }
 
 .price__title {
+  max-width: 550px;
   margin: auto;
-  margin-bottom: 58px;
+  margin-bottom: 47px;
+  padding-top: 16px;
+  font-size: 30px;
+  line-height: 45px;
 }
 
 .price__subtitle {
   display: block;
-  margin-bottom: 59px;
+  margin-bottom: 57px;
+  font-size: 20px;
+  line-height: 24px;
   text-align: center;
 }
 
@@ -597,11 +609,15 @@ img {
 }
 
 .card__text {
-  padding: 40px;
+  padding: 36px;
+  padding-bottom: 44px;
 }
 
 .card__title {
   margin-top: 0;
+  margin-bottom: 28px;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 .card__image {

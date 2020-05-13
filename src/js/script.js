@@ -84,7 +84,7 @@ $(document).ready(function() {
 
   $('.owl-carousel').owlCarousel({
     loop:true,
-    margin:10,
+    margin:30,
     nav:true,
     navContainerClass:'arrows',
     navClass:['arrows__left', 'arrows__right'],
