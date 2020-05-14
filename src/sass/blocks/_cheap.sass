@@ -35,3 +35,36 @@
       position: absolute
       top: 0
       left: 0
+@media(max-width: 1200px)
+  .cheap
+    &-list
+      &__item
+        margin-right: 30px
+        &:last-child
+          margin-right: 0
+      &__image
+        top: auto
+@media(max-width: 768px)
+  .cheap
+    &-list
+      flex-wrap: wrap
+      justify-content: center
+      &__item
+        margin-right: 0
+        margin-bottom: 350px
+        &:last-child
+          margin-right: 0
+      &__image
+        top: 0
+    &__text
+      font-size: 12px
+      line-height: 17px
+@media(max-width: 576px)
+  .cheap
+    &__title
+      padding: 75px 33px
+      font-size: 18px
+      line-height: 20px
+    &-list
+      &__item
+        margin-bottom: 80%

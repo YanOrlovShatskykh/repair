@@ -725,7 +725,7 @@ img {
     margin-bottom: 46px;
   }
   .card {
-    width: 95%;
+    width: 72%;
     margin-bottom: 27px;
   }
   .card__title {
@@ -839,6 +839,10 @@ img {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .advantages-list__item {
+    margin-right: 20px;
+    margin-bottom: 32px;
+  }
   .advantages-list__item:not(:last-child)::after {
     background-image: none;
   }
@@ -859,7 +863,7 @@ img {
     margin-bottom: 31px;
   }
   .advantages-list__item {
-    margin-bottom: 32px;
+    margin-right: 0;
   }
   .advantages-list__image {
     margin-bottom: 32px;
@@ -924,6 +928,53 @@ img {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+@media (max-width: 1200px) {
+  .cheap-list__item {
+    margin-right: 30px;
+  }
+  .cheap-list__item:last-child {
+    margin-right: 0;
+  }
+  .cheap-list__image {
+    top: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .cheap-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .cheap-list__item {
+    margin-right: 0;
+    margin-bottom: 350px;
+  }
+  .cheap-list__item:last-child {
+    margin-right: 0;
+  }
+  .cheap-list__image {
+    top: 0;
+  }
+  .cheap__text {
+    font-size: 12px;
+    line-height: 17px;
+  }
+}
+
+@media (max-width: 576px) {
+  .cheap__title {
+    padding: 75px 33px;
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .cheap-list__item {
+    margin-bottom: 80%;
+  }
 }
 
 .modal {
