@@ -1,3 +1,4 @@
+// init WOW library
 new WOW().init();
 $(document).ready(function() {
   const button = $('#button');
@@ -5,6 +6,7 @@ $(document).ready(function() {
   const modalClose = $('#close');
   const buttonUp = $('#button-up');
 
+  // opening and closing modal window
   const openModal = event => {
     event.preventDefault();
     modal.addClass('modal_active');
@@ -22,7 +24,43 @@ $(document).ready(function() {
       $(modalClose).off('click', closeModal);
     }
   };
+  
+  // form validation
+  $("#brif-form").validate({
+    errorClass: "invalid", // rename error-class  
+    errorElement: 'div',   // change error tag 
+    rules: {
+      username: {
+        required: true,
+        rangelength: [2, 15]
+      },
+      phone: {
+        required: true,
+      },
+      email: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      username: {
+        required: "Пожалуйста введите своё имя",
+        rangelength: "Ваше имя должно быть больше одного символа и меньше 15"
+      },
+      email: {
+        required: "Нам необходим адрес почты, чтобы связаться с Вами",
+        email: "Адрес Вашей почты должен быть похож на этот - hello@mail.com"
+      },
+      phone: {
+        required: "Нам необходим номер Вашего телефона"
+      },
+    }
+  });
 
+  // init phome mask from maskedinput library
+  $(".phone").mask("+38 (999) 999-9999");
+
+  // button top show script
   $(window).scroll(() => {    
     if ($(window).scrollTop() > 90) {
       buttonUp.addClass('button-up_show');
@@ -31,6 +69,7 @@ $(document).ready(function() {
     }
   });
   
+  // smooth scroll script
   buttonUp.on('click', event => {
     event.preventDefault();
     $('html, body').animate({scrollTop:0}, '300');
@@ -38,6 +77,7 @@ $(document).ready(function() {
 
   button.on('click', openModal);
 
+  // settings for slick slider
   // $(document).ready(function() {
   //   $('.slider').slick({
   //     infinite: true,
@@ -65,23 +105,7 @@ $(document).ready(function() {
   //   });
   // });
 
-  // $('.owl-carousel').owlCarousel({
-  //   loop:true,
-  //   margin:10,
-  //   nav:true,
-  //   responsive:{
-  //       0:{
-  //           items:1
-  //       },
-  //       600:{
-  //           items:3
-  //       },
-  //       1000:{
-  //           items:5
-  //       }
-  //   }
-  // });
-
+  // settings for owl carousel
   $('.owl-carousel').owlCarousel({
     loop:true,
     margin:30,
@@ -105,7 +129,5 @@ $(document).ready(function() {
             items:3
         }
     }
-  });
-
-  
+  });  
 });
