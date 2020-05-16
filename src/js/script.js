@@ -1,6 +1,7 @@
-// init WOW library
-new WOW().init();
 $(document).ready(function() {
+  // init WOW library
+  new WOW().init();
+
   const button = $('#button');
   const modal = $('#modal');
   const modalClose = $('#close');
@@ -59,6 +60,30 @@ $(document).ready(function() {
 
   // init phome mask from maskedinput library
   $(".phone").mask("+38 (999) 999-9999");
+
+  // form validation
+  $("#offer-form").validate({
+    errorClass: "invalid", // rename error-class  
+    errorElement: 'div',   // change error tag 
+    rules: {
+      username: {
+        // required: true,
+        rangelength: [2, 15]
+      },
+      phone: {
+        required: true,
+      }
+    },
+    messages: {
+      username: {
+        // required: "Пожалуйста введите своё имя",
+        rangelength: "Ваше имя должно быть больше одного символа и меньше 15"
+      },
+      phone: {
+        required: "Нам необходим номер Вашего телефона"
+      }
+    }
+  });
 
   // button top show script
   $(window).scroll(() => {    
@@ -129,5 +154,28 @@ $(document).ready(function() {
             items:3
         }
     }
-  });  
+  });
+
+  //sending data to mail
+  $('#offer-form').on('submit', function(event) {
+    event.preventDefault();
+
+    if($('.username').val()) {
+      $.ajax({
+        url: '../php/mail.php',
+        method: 'POST',
+        data: $(this).serialize(),
+        success: function(data){
+          if(data) {
+            $('.success__title').text(data + ', спасибо за заявку, скоро мы Вам перезвоним.');
+            $('.offer__input').val('');
+          } else {
+            $('.offer__input').val('');
+          }
+        }
+      });      
+    } else {
+      $('.success__title').text('Пожалуйста укажите Ваше имя.');
+    }
+  });
 });
