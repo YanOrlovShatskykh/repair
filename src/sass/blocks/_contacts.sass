@@ -1,0 +1,89 @@
+.contacts
+  color: #000000
+  &__section
+    padding: 0
+    display: flex
+  &__map
+    flex-basis: 50%
+  &__adress
+    flex-basis: 50%
+    padding-left: 255px
+  &__title
+    margin: 0
+    margin-bottom: 90px
+    padding-top: 95px
+    width: 100%
+    max-width: 300px
+    font-size: 22px
+    line-height: 33px
+  &-list
+    margin: 0
+    padding: 0
+    list-style: none
+    font-size: 16px
+    line-height: 26px
+    &__item
+      position: relative
+      padding: 0
+      margin-bottom: 40px
+      display: flex
+      &::before
+        content: "";
+        position: absolute;
+        left: -55px
+        top: 23px
+        width: 20px
+        height: 20px
+        background-image: url('../img/contacts/1.svg');
+        background-repeat: no-repeat
+        background-position: top center
+        background-size: contain
+      &:nth-child(2)::before
+        background-image: url('../img/contacts/2.svg');
+      &:nth-child(3)::before
+        background-image: url('../img/contacts/3.svg');
+    &__text
+      margin: 0
+      &_bold
+        +bold
+      position: relative
+@media(max-width: 1200px)
+  .contacts
+    &__adress
+      padding-left: 85px
+    &__title
+      padding-top: 65px
+      margin-bottom: 65px
+      font-size: 20px
+      line-height: 23px
+@media(max-width: 768px)
+  .contacts
+    &__map
+      height: 600px
+    &__section
+      flex-direction: column-reverse
+      align-items: center
+    &__map
+      width: 100%
+    &__adress
+      width: 40%
+      padding-left: 0
+    &__title
+      padding-top: 65px
+      margin-bottom: 30px
+      font-size: 18px
+      line-height: 20px
+    &-list
+      &__item
+        margin-bottom: 30px
+@media(max-width: 540px)
+  .contacts
+    &__adress
+      width: 80%
+    &-list
+      margin-left: 30px
+      &__item
+        &::before
+          left: -30px
+          top: 5px
+
