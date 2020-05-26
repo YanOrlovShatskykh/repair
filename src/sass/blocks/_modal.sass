@@ -22,5 +22,54 @@
     background-color: #ffffff
     &__close
       position: absolute
-      top: 0
-      right: 0
+      top: 10px
+      right: 10px
+      background: none
+      border: none
+      outline: none
+      cursor: pointer
+      &::before
+        top: 20px
+        right: 10px
+        content: ""
+        position: absolute
+        width: 25px
+        height: 5px
+        background-color: #000000
+        transform: rotate(45deg)
+      &::after
+        top: 20px
+        right: 10px
+        content: ""
+        position: absolute
+        width: 25px
+        height: 5px
+        background-color: #000000
+        transform: rotate(-45deg)
+    &__title
+      margin: 0
+      margin-bottom: 50px
+      font-size: 22px
+      line-height: 33px
+      +bold
+      text-align: center
+    &__subtitle
+      display: block
+      margin-bottom: 50px
+      font-size: 16px
+      line-height: 35px
+      text-align: center
+    &__description
+      display: block
+      margin-bottom: 10px
+      text-align: center
+      font-size: 15px
+      line-height: 20px
+    &__phone
+      display: block
+      text-align: center
+      font-size: 24px
+      line-height: 24px
+      +bold
+
+

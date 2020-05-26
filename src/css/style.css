@@ -1453,7 +1453,70 @@ img {
 
 .modal-dialog__close {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.modal-dialog__close::before {
+  top: 20px;
+  right: 10px;
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 5px;
+  background-color: #000000;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.modal-dialog__close::after {
+  top: 20px;
+  right: 10px;
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 5px;
+  background-color: #000000;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.modal-dialog__title {
+  margin: 0;
+  margin-bottom: 50px;
+  font-size: 22px;
+  line-height: 33px;
+  font-family: 'Museo Sans Bold', 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+.modal-dialog__subtitle {
+  display: block;
+  margin-bottom: 50px;
+  font-size: 16px;
+  line-height: 35px;
+  text-align: center;
+}
+
+.modal-dialog__description {
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.modal-dialog__phone {
+  display: block;
+  text-align: center;
+  font-size: 24px;
+  line-height: 24px;
+  font-family: 'Museo Sans Bold', 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 700;
 }
 /*# sourceMappingURL=style.css.map */
