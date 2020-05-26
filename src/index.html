@@ -16,6 +16,7 @@
     <script src="js/jquery.validate.min.js" defer></script>
     <script src="js/jquery.maskedinput.min.js" defer></script>
     <script src="js/script.js" defer></script>
+    <!-- <script src="js/scripts.min.js" defer></script> -->
   </head>
   <body>
     <nav class="navbar">
@@ -528,8 +529,24 @@
     <div class="modal" id="modal">
       <div class="modal-dialog">
         <button class="modal-dialog__close" id="close">&times;</button> <!-- /.modal-dialog__close -->
-        <h4 class="modal-dialog__title">Всплывающее окно</h4>
+        <h3 class="modal-dialog__title">Узнайте точную стоимость ремонта по телефону</h3>
         <!-- /.modal-dialog__title -->
+        <span class="modal-dialog__subtitle">
+          Заполните поля ниже - мы свяжемся с Вами
+        </span> 
+        <!-- /.modal-dialog__subtitle -->
+        <form action="#" id="modal-dialog__form">
+          <input type="text" name="username" class="input brif__input" placeholder="Ваше имя">
+          <input type="tel" name="phone" class="input brif__input phone" placeholder="Ваш телефон">
+          <button class="button brif__button">Узнать стоимость</button>
+          <!-- /.button brif__button -->
+          <span class="modal-dialog__description">
+            Или Вы можете перезвонить нам сами по телефону:
+          </span>
+          <span class="modal-dialog__phone">
+            +7 (8182) 42-51-31
+          </span>
+        </form>
       </div>
     </div>
     <!-- /.modal -->
