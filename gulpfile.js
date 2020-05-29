@@ -164,7 +164,7 @@ let { src, dest } = require('gulp'),
     gulp.watch([path.watch.img], images);
   }
 
-  function clean(params) {
+  function clean() {
     return del(path.clean);
   }
 

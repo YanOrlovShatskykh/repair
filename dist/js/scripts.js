@@ -34,10 +34,44 @@ $(document).ready(function() {
     modal.addClass('modal_active');
     $(document).on('keydown', closeModal);
     modal.on('click', closeModal);
+
+// form validation
+  $("#brif-form-d").validate({
+    errorClass: "invalid", // rename error-class  
+    errorElement: 'div',   // change error tag 
+    rules: {
+      username: {
+        required: true,
+        rangelength: [2, 15]
+      },
+      phone: {
+        required: true,
+      },
+      email: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      username: {
+        required: "Пожалуйста введите своё имя",
+        rangelength: "Ваше имя должно быть больше одного символа и меньше 15"
+      },
+      email: {
+        required: "Нам необходим адрес почты, чтобы связаться с Вами",
+        email: "Адрес Вашей почты должен быть похож на этот - hello@mail.com"
+      },
+      phone: {
+        required: "Нам необходим номер Вашего телефона"
+      },
+    }
+  });
+
+
   };
   
   const closeModal = event => {
-    event.preventDefault();
+    // event.preventDefault();
     const target = event.target;
     
     if(modalClose[0] === target || event.keyCode === 27 || $(target).hasClass('modal_active')) {
@@ -46,7 +80,11 @@ $(document).ready(function() {
       $(modalClose).off('click', closeModal);
     }
   };
-  
+  button.on('click', openModal);
+
+  // init phome mask from maskedinput library
+  $(".phone").mask("+7 (9999) 999-9999");
+
   // form validation
   $("#brif-form").validate({
     errorClass: "invalid", // rename error-class  
@@ -79,8 +117,6 @@ $(document).ready(function() {
     }
   });
 
-  // init phome mask from maskedinput library
-  $(".phone").mask("+38 (999) 999-9999");
 
   // form validation
   $("#offer-form").validate({
@@ -105,6 +141,11 @@ $(document).ready(function() {
       }
     }
   });
+  
+
+  
+
+  
 
   // button top show script
   $(window).scroll(() => {    
@@ -121,7 +162,6 @@ $(document).ready(function() {
     $('html, body').animate({scrollTop:0}, '300');
   });
 
-  button.on('click', openModal);
 
   // settings for slick slider
   // $(document).ready(function() {
@@ -199,6 +239,8 @@ $(document).ready(function() {
       $('.success__title').text('Пожалуйста укажите Ваше имя.');
     }
   });
+
+  // script for testing is browser support webp images. If support class webp adding to body.
 
   function testWebP(callback) {
     var webP = new Image();
